@@ -1,45 +1,22 @@
 {
-  "name": "superchat-alerts",
+  "name": "youtube-stream-alerts",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"wait-on http://localhost:8080 && electron .\"",
-    "build": "electron-builder"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dushyant Kumar",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "googleapis": "^144.0.0",
-    "keyboard": "^0.0.1",
-    "obs-websocket-js": "^5.0.6",
-    "say": "^0.16.0",
     "websocket": "^1.0.35",
     "ws": "^8.18.0"
   },
-  "devDependencies": {
-    "concurrently": "^9.1.2",
-    "electron": "^33.3.1",
-    "electron-builder": "^25.1.8",
-    "wait-on": "^5.3.0"
-  },
-  "build": {
-    "appId": "com.superchat.alerts",
-    "win": {
-      "target": "nsis",
-      "icon": "icon.ico"
-    },
-    "mac": {
-      "target": "dmg",
-      "icon": "icon.icns"
-    },
-    "linux": {
-      "target": "AppImage",
-      "icon": "icon.png"
-    }
-  }
+  "description": "A server to monitor live broadcasts and chat messages on YouTube",
+  "devDependencies": {}
 }
