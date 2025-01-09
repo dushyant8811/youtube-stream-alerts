@@ -1,3 +1,5 @@
+require('dotenv').config(); // Load environment variables from .env file
+
 const { google } = require('googleapis');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -41,6 +43,13 @@ function sendMessageToClients(message) {
         }
     });
 }
+
+// Root route to handle "/" requests
+app.get('/', (req, res) => {
+    res.send(
+        'Welcome to the YouTube Streamer Server! Go to <a href="/auth">/auth</a> to authenticate.'
+    );
+});
 
 // Route to initiate OAuth flow
 app.get('/auth', (req, res) => {
@@ -175,4 +184,3 @@ app.server.on('upgrade', (request, socket, head) => {
         wss.emit('connection', ws, request);
     });
 });
-

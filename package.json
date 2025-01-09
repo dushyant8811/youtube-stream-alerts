@@ -12,11 +12,11 @@
   "dependencies": {
     "axios": "^1.7.9",
     "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "googleapis": "^144.0.0",
     "websocket": "^1.0.35",
     "ws": "^8.18.0"
   },
-  "description": "A server to monitor live broadcasts and chat messages on YouTube",
-  "devDependencies": {}
+  "description": "A server to monitor live broadcasts and chat messages on YouTube"
 }
